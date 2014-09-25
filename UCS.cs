@@ -77,16 +77,20 @@ public class UCS : MonoBehaviour {
 	/**
 	 * Returns the full available width of the screen in universal co-ordinates.
 	 */
-	private static float GetWidth() {
+	public static float GetWidth() {
 		CheckAspect ();
-		return 2.0f + (padX * 2);
+		return (2.0f + (padX * 2)) / 2;
 	}
 
 	/**
 	 * Returns the full available width of the screen in universal co-ordinates.
 	 */
-	private static float GetHeight() {
+	public static float GetHeight() {
 		CheckAspect ();
-		return 2.0f + (padY * 2);
+		return (2.0f + (padY * 2)) / 2;
+	}
+
+	public static int FontSize(int size) {
+		return (int)((size * 480.0f) / Screen.height);
 	}
 }
