@@ -91,6 +91,6 @@ public class UCS : MonoBehaviour {
 	}
 
 	public static int FontSize(int size) {
-		return (int)((size * 480.0f) / Screen.height);
+		return (int)((size * Screen.height) / 480.0f);
 	}
 }
